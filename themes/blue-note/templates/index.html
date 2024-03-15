@@ -1,0 +1,19 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","layout":{"type":"constrained","justifyContent":"left"}} -->
+<main class="wp-block-group">
+	<!-- wp:query-title {"type":"archive","style":{"spacing":{"margin":{"bottom":"100px"}}}} /-->
+
+	<!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group alignfull">
+		<!-- wp:ironnysh/search-filter-events -->
+		<form role="search"><label>Search for sessions by topic, location, speaker, etc.<input type="search"
+					name="searchFilter" placeholder="Start typing to filter the results..." /></label></form>
+		<!-- /wp:ironnysh/search-filter-events -->
+		<!-- wp:pattern {"slug":"blue-note/posts"} /-->
+	</div>
+	<!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

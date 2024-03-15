@@ -1,0 +1,71 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"landingPage": "/wp-admin/edit.php",
+	"preferredVersions": {
+		"php": "8.0",
+		"wp": "latest"
+	},
+	"steps": [
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/ironnysh/playground-demo-handover/main/zips/meta-block-sidebar.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/ironnysh/playground-demo-handover/main/zips/search-filter-events.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "create-block-theme"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installTheme",
+			"themeZipFile": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/ironnysh/playground-demo-handover/main/zips/blue-note.1.0.1.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installTheme",
+			"themeZipFile": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/ironnysh/playground-demo-handover/main/zips/stacks.0.0.3.zip"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "defineWpConfigConsts",
+			"consts": {
+				"WP_DEBUG": true
+			}
+		}
+	]
+}
