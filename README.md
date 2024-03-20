@@ -22,7 +22,7 @@ The website also includes the community plugin [Create Block Theme](https://word
 
 Use [WordPress Playground](https://wordpress.github.io/wordpress-playground/) to run an in-browser instance of WordPress with the **Blue Note** theme and three plugins **already installed and activated**:
 
-- Click [here to open the Demo Handover Playground](https://example.com/playground/).
+- Click [here to open the Demo Handover Playground](https://playground-demo-handover.vercel.app/playground/).
 
 OR
 
