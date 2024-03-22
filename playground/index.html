@@ -31,7 +31,8 @@
   <body>
     <header>
       <h1>Playground Demo</h1>
-      <p>Source code <a href="https://github.com/ironnysh/playground-demo-handover" target="_blank" rel="noopener">on GitHub</a></p>
+      <p>Source code <a href="https://github.com/ironnysh/playground-demo-handover" target="_blank" rel="noopener">on
+          GitHub</a></p>
     </header>
     <iframe id="wp-playground" title="Demo Handover Playground"></iframe>
     <script type="module">
@@ -42,32 +43,20 @@
         remoteUrl: `https://playground.wordpress.net/remote.html`,
         blueprint:
         {
-          "landingPage": "/wp-admin/edit.php",
+          "landingPage": "/?p=4",
           "preferredVersions": {
-            "php": "8.0",
+            "php": "latest",
             "wp": "latest"
           },
           "steps": [
             {
-              "step": "login",
-              "username": "admin",
-              "password": "password"
+              "step": "login"
             },
             {
               "step": "installPlugin",
               "pluginZipFile": {
                 "resource": "url",
                 "url": "zips/meta-block-sidebar.zip"
-              },
-              "options": {
-                "activate": true
-              }
-            },
-            {
-              "step": "installPlugin",
-              "pluginZipFile": {
-                "resource": "url",
-                "url": "zips/search-filter-events.zip"
               },
               "options": {
                 "activate": true
@@ -87,22 +76,16 @@
               "step": "installTheme",
               "themeZipFile": {
                 "resource": "url",
-                "url": "zips/blue-note.1.0.1.zip"
+                "url": "zips/blue-note.zip"
               },
               "options": {
                 "activate": true
               }
             },
             {
-              "step": "installTheme",
-              "themeZipFile": {
-                "resource": "url",
-                "url": "zips/stacks.0.0.3.zip"
-              },
-              "options": {
-                "activate": false
-              }
-            },
+              "step": "runPHP",
+              "code": "<?php require_once('/wordpress/wp-load.php'); wp_insert_post(array( 'post_title' => 'Created by a Blueprint', 'post_content' => '<!-- wp:paragraph --><p>How do you update the meta fields?</p><!-- /wp:paragraph --><!-- wp:list --><ul><!-- wp:list-item --><li>Open the <strong><em>Settings</em></strong> sidebar by clicking the window icon next to the blue <em><strong>Update</strong></em> button.</li><!-- /wp:list-item --><!-- wp:list-item --><li>Click the <strong><em>Meta Block Sidebar</em></strong> menu (bellow the <strong><em>Summary</em></strong> menu).</li><!-- /wp:list-item --><!-- wp:list-item --><li>Type the <strong><em>Team name</em></strong> and the <strong><em>date</em></strong> the person joined the company in the respective fields.</li><!-- /wp:list-item --><!-- wp:list-item --><li>Click the blue <em><strong>Update</strong></em> button.</li><!-- /wp:list-item --></ul><!-- /wp:list -->','post_status' => 'publish' ));"
+            }
           ]
         },
       });
