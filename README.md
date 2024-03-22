@@ -14,7 +14,7 @@ The [`themes`](themes) directory includes a customized copy of [Blue Note](https
 
 The [`plugins`](plugins) directory includes a custom plugin used in the website:
 
-2. **Meta Block Sidebar** (see [`meta-block-sidebar`](plugins/meta-block-sidebar/readme.txt)): A custom block-based plugin that adds two custom meta fields (`team` and `joined`) specifying the person's team name and the date (Month, Year) they joined the company, and displays them in the frontend. See the _Description_ for more information.
+**Meta Block Sidebar** (see [`meta-block-sidebar`](plugins/meta-block-sidebar/readme.txt)): A custom block-based plugin that adds two custom meta fields (`team` and `joined`) specifying the person's team name and the date (Month, Year) they joined the company, and displays them in the frontend. See the _Description_ for more information.
 
 The website also includes the community plugin [Create Block Theme](https://wordpress.org/plugins/create-block-theme/).
 
@@ -28,4 +28,4 @@ OR
 
 - Click [here to see the official Plyground demo](https://playground.wordpress.net/).
 
-**Note:** The files that power the demo [are here](playground). You can change the behavior by editing the `blueprint` section in [`index.html`](playground/index.html#L44-L107).
+**Note:** The files that power the demo [are here](playground). You can change the behavior by editing the `blueprint` section in [`index.html`](playground/index.html#L46-L90).
