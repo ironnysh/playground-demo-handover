@@ -13,7 +13,7 @@
 			"step": "installPlugin",
 			"pluginZipFile": {
 				"resource": "url",
-				"url": "zips/meta-block-sidebar.zip"
+				"url": "https://github.com/ironnysh/playground-demo-handover/blob/main/playground/zips/meta-block-sidebar.zip"
 			},
 			"options": {
 				"activate": true
@@ -33,7 +33,7 @@
 			"step": "installTheme",
 			"themeZipFile": {
 				"resource": "url",
-				"url": "zips/blue-note.zip"
+				"url": "https://github.com/ironnysh/playground-demo-handover/blob/main/playground/zips/blue-note.zip"
 			},
 			"options": {
 				"activate": true
