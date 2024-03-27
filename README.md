@@ -2,9 +2,9 @@
 
 ## Description
 
-Show how to use WordPress Playground for interactive project handovers.
+Demonstrate how to use WordPress Playground for interactive project handovers.
 
-In this demo, we create a post that explains the client how to use a custom plugin.
+In this demo, we create a post that explains to the user how to update the data of a custom plugin.
 
 ### Themes
 
@@ -26,6 +26,6 @@ We use [WordPress Playground](https://wordpress.github.io/wordpress-playground/)
 
 OR
 
-- Click [here to see the official Plyground demo](https://playground.wordpress.net/).
+- Click [here to see the official Playground demo](https://playground.wordpress.net/).
 
 **Note:** The files that power the demo [are here](playground). You can change the behavior by editing the `blueprint` section in [`index.html`](playground/index.html#L46-L90).
