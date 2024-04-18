@@ -13,7 +13,7 @@
 			"step": "installPlugin",
 			"pluginZipFile": {
 				"resource": "url",
-				"url": "https://playground-demo-handover.vercel.app/playground/zips/meta-block-sidebar.zip"
+				"url": "https://raw.githubusercontent.com/ironnysh/playground-demo-handover/main/playground/zips/meta-block-sidebar.zip"
 			},
 			"options": {
 				"activate": true
@@ -33,7 +33,7 @@
 			"step": "installTheme",
 			"themeZipFile": {
 				"resource": "url",
-				"url": "https://playground-demo-handover.vercel.app/playground/zips/blue-note.zip"
+				"url": "https://raw.githubusercontent.com/ironnysh/playground-demo-handover/main/playground/zips/blue-note.zip"
 			},
 			"options": {
 				"activate": true
