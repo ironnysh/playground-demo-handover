@@ -4,8 +4,20 @@
 			"source": "/playground/(.*)",
 			"headers": [
 				{
+					"key": "Access-Control-Allow-Credentials",
+					"value": "true"
+				},
+				{
 					"key": "Access-Control-Allow-Origin",
-					"value": "https://playground.wordpress.net"
+					"value": "https://playground.wordpress.net/"
+				},
+				{
+					"key": "Access-Control-Allow-Methods",
+					"value": "GET,HEAD"
+				},
+				{
+					"key": "Access-Control-Allow-Headers",
+					"value": "*"
 				}
 			]
 		}
