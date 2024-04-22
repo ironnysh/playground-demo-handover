@@ -56,10 +56,16 @@
               "blogname": "WordPress Playground Demo"
             },
             "plugins": [
-              "create-block-theme",
-              "zips/meta-block-sidebar.zip"
+              "create-block-theme"
             ],
             "steps": [
+              {
+                "step": "installPlugin",
+                "pluginZipFile": {
+                  "resource": "url",
+                  "url": "zips/meta-block-sidebar.zip"
+                }
+              },
               {
                 "step": "installTheme",
                 "themeZipFile": {
