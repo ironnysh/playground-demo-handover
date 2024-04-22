@@ -14,15 +14,19 @@
 
       header {
         font-size: 1em;
-        font-family: monospace;
+        font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
         display: flex;
         align-items: baseline;
         gap: 1rem;
       }
 
+      a {
+        color: currentcolor;
+      }
+
       iframe#wp-playground {
-        width: 100%;
-        height: 100dvh;
+        width: 95vw;
+        height: 95vh;
         border: 2px solid currentColor;
       }
     </style>
@@ -34,48 +38,47 @@
       <p>Source code <a href="https://github.com/ironnysh/playground-demo-handover" target="_blank" rel="noopener">on
           GitHub</a></p>
     </header>
-    <iframe id="wp-playground" title="Demo Handover Playground"></iframe>
-    <script type="module">
-      import { startPlaygroundWeb } from 'https://playground.wordpress.net/client/index.js';
+    <main>
+      <iframe id="wp-playground" title="Demo Handover Playground"></iframe>
+      <script type="module">
+        import { startPlaygroundWeb } from 'https://playground.wordpress.net/client/index.js';
 
-      const client = await startPlaygroundWeb({
-        iframe: document.getElementById('wp-playground'),
-        remoteUrl: `https://playground.wordpress.net/remote.html`,
-        blueprint:
-        {
-          "preferredVersions": {
-            "php": "latest",
-            "wp": "latest"
-          },
-          "siteOptions": {
-            "blogname": "WordPress Playground Demo"
-          },
-          "plugins": [
-            "create-block-theme",
-            "https://raw.githubusercontent.com/ironnysh/playground-demo-handover/main/playground/zips/meta-block-sidebar.zip"
-          ],
-          "steps": [
-            {
-              "step": "installTheme",
-              "themeZipFile": {
-                "resource": "url",
-                "url": "https://raw.githubusercontent.com/ironnysh/playground-demo-handover/main/playground/zips/blue-note.zip"
-              }
+        const client = await startPlaygroundWeb({
+          iframe: document.getElementById('wp-playground'),
+          remoteUrl: `https://playground.wordpress.net/remote.html`,
+          blueprint:
+          {
+            "preferredVersions": {
+              "php": "latest",
+              "wp": "latest"
             },
-            {
-              "step": "runPHP",
-              "code": "<?php require_once('/wordpress/wp-load.php'); wp_insert_post(array( 'post_title' => 'Created by a Blueprint', 'post_content' => '<!-- wp:paragraph --><p>How do you update the meta fields?</p><!-- /wp:paragraph --><!-- wp:list --><ol><!-- wp:list-item --><li>Open the <strong>Settings</strong> sidebar by clicking the window icon next to the blue <strong>Update</strong> button.</li><!-- /wp:list-item --><!-- wp:list-item --><li>Click the <strong>Meta Block Sidebar</strong> menu (below the <strong>Summary</strong> menu).</li><!-- /wp:list-item --><!-- wp:list-item --><li>Type the <strong>Team name</strong> and the <strong>date</strong> the person joined the company in the respective fields.</li><!-- /wp:list-item --><!-- wp:list-item --><li>Click the blue <strong>Update</strong> button.</li><!-- /wp:list-item --></ol><!-- /wp:list -->','post_status' => 'publish' ));"
-            }
-          ],
-          "features": {
-            "networking": true
+            "siteOptions": {
+              "blogname": "WordPress Playground Demo"
+            },
+            "plugins": [
+              "create-block-theme",
+              "https://raw.githubusercontent.com/ironnysh/playground-demo-handover/main/playground/zips/meta-block-sidebar.zip"
+            ],
+            "steps": [
+              {
+                "step": "installTheme",
+                "themeZipFile": {
+                  "resource": "url",
+                  "url": "https://raw.githubusercontent.com/ironnysh/playground-demo-handover/main/playground/zips/blue-note.zip"
+                }
+              },
+              {
+                "step": "runPHP",
+                "code": "<?php require_once('/wordpress/wp-load.php'); wp_insert_post(array( 'post_title' => 'Created by a Blueprint', 'post_content' => '<!-- wp:paragraph --><p>How do you update the meta fields?</p><!-- /wp:paragraph --><!-- wp:list --><ul><!-- wp:list-item --><li>Open the <strong>Settings</strong> sidebar by clicking the window icon next to the blue <strong>Update</strong> button.</li><!-- /wp:list-item --><!-- wp:list-item --><li>Click the <strong>Meta Block Sidebar</strong> menu (below the <strong>Summary</strong> menu).</li><!-- /wp:list-item --><!-- wp:list-item --><li>Type the <strong>Team name</strong> and the <strong>date</strong> the person joined the company in the respective fields.</li><!-- /wp:list-item --><!-- wp:list-item --><li>Click the blue <strong>Update</strong> button.</li><!-- /wp:list-item --></ul><!-- /wp:list -->','post_status' => 'publish' ));"
+              }
+            ],
+            "login": true,
+            "landingPage": "/?p=4"
           },
-          "login": true,
-          "landingPage": "/?p=4"
-        },
-      });
-
-    </script>
+        });
+        await client.isReady();
+      </script>
+    </main>
   </body>
 
 </html>
