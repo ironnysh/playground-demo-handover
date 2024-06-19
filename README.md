@@ -4,7 +4,9 @@
 
 Demonstrate how to use WordPress Playground for interactive project handovers.
 
-In this demo, we create a post that explains to the user how to update the data of a custom plugin.
+In this demo, I create a post that explains to the user how to update the data of a custom plugin.
+
+Read the step-by-step tutorial on the WordPress Developer Blog: [How to use WordPress Playground for interactive demos](https://developer.wordpress.org/news/2024/04/25/how-to-use-wordpress-playground-for-interactive-demos/).
 
 ### Themes
 
@@ -20,7 +22,7 @@ The website also includes the community plugin [Create Block Theme](https://word
 
 ## Playground
 
-We use [WordPress Playground](https://wordpress.github.io/wordpress-playground/) to run an in-browser instance of WordPress with the adapted **Blue Note** theme and the plugin **already installed and activated**:
+I use [WordPress Playground](https://wordpress.github.io/wordpress-playground/) to run an in-browser instance of WordPress with the adapted **Blue Note** theme and the plugin **already installed and activated**:
 
 - Click [here to open the live demo we prepared](https://playground-demo-handover.vercel.app/).
 
